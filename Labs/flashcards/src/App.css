@@ -1,0 +1,266 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8fdf8;
+}
+
+body {
+  background-color: #f8fdf8;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239ed292' fill-opacity='0.15'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.background-decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.pngall.com/wp-content/uploads/2016/07/Plants-Download-PNG.png');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.header {
+  margin-bottom: 2rem;
+  z-index: 1;
+  max-width: 80%;
+}
+
+.header h1 {
+  color: #1b5e20;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header h3 {
+  color: #388e3c;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.header p {
+  color: #558b2f;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card-container {
+  perspective: 1000px;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.25);
+  padding: 0;
+  overflow: hidden;
+  background-color: #e9e86c; /* fallback color */
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translateZ(0); /* Fix for any rendering issues */
+}
+
+.card-front {
+  background-color: #e9e86c;
+  color: #1b5e20;
+  background-image: linear-gradient(135deg, #e9e86c 0%, #d4e157 100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+  transform: rotateY(180deg);
+  background-image: linear-gradient(135deg, #c8e6c9 0%, #81c784 100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h2, .card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  z-index: 2;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.card-image {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.card-details {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+  color: #2e5c1e;
+  max-width: 90%;
+}
+
+.controls {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+}
+
+button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+button:hover:before {
+  left: 100%;
+}
+
+button:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.next-button {
+  background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+  color: white;
+}
+
+.flip-button {
+  background: linear-gradient(135deg, #fb8c00 0%, #ef6c00 100%);
+  color: white;
+}
+
+.card-front.care {
+  background-image: linear-gradient(135deg, #bbdefb 0%, #42a5f5 100%);
+}
+
+.card-back.care {
+  background-image: linear-gradient(135deg, #90caf9 0%, #1e88e5 100%);
+}
+
+.card-front.indoor {
+  background-image: linear-gradient(135deg, #e6ee9c 0%, #c0ca33 100%);
+}
+
+.card-back.indoor {
+  background-image: linear-gradient(135deg, #dce775 0%, #9e9d24 100%);
+}
+
+.card-front.succulent {
+  background-image: linear-gradient(135deg, #ffecb3 0%, #ffd54f 100%);
+}
+
+.card-back.succulent {
+  background-image: linear-gradient(135deg, #ffe082 0%, #ffb300 100%);
+}
+
+.card-front.facts {
+  background-image: linear-gradient(135deg, #d1c4e9 0%, #9575cd 100%);
+}
+
+.card-back.facts {
+  background-image: linear-gradient(135deg, #b39ddb 0%, #7e57c2 100%);
+}
