@@ -1,12 +1,14 @@
-# CodeQuiz: Computer Science Trivia Flashcards
+# Web Development Project - *CodeQuiz: Computer Science Trivia Flashcards*
 
-## Overview
-CodeQuiz is an interactive flashcard application designed to test and improve your knowledge of computer science concepts. Whether you're a CS student, preparing for technical interviews, or just curious about technology, CodeQuiz offers an engaging way to learn computer science fundamentals.
+Submitted by: **Abdullah Al Mahmud**
 
-### App Walkthrough
-![App Walkthrough](https://imgur.com/a/eujmIbR.gif)
+This web app: **An interactive flashcard application designed to test and improve your knowledge of computer science concepts with engaging trivia questions.**
+
+Time spent: **13** hours spent in total
 
 ## Required Features
+
+The following **required** functionality is completed:
 
 - [x] **User Input**
   - [x] Users can enter their guess in a text field before revealing the answer
@@ -23,7 +25,7 @@ CodeQuiz is an interactive flashcard application designed to test and improve yo
   - [x] The app tracks the longest streak achieved in the session
   - [x] Streak counter resets to zero when an incorrect answer is given
 
-## Stretch Features
+The following **optional** features are implemented:
 
 - [x] **Card Randomization**
   - [x] A shuffle button allows users to get a random card from the deck
@@ -31,6 +33,43 @@ CodeQuiz is an interactive flashcard application designed to test and improve yo
 - [x] **Fuzzy Answer Matching**
   - [x] Answers are matched using a fuzzy algorithm that allows for slight differences
   - [x] The matching system considers partial answers if they're specific enough
+
+The following **additional** features are implemented:
+
+* [x] Modern dark mode interface with tech-inspired design
+* [x] Visual feedback for correct/incorrect answers
+* [x] Color-coded cards by category
+* [x] Detailed explanations provided with each answer
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented features:
+
+![App Walkthrough](https://imgur.com/a/eujmIbR.gif)
+
+## Notes
+
+Some challenges I encountered while building this app:
+- Implementing the fuzzy matching algorithm for answer validation
+- Creating an effective streak tracking system
+- Designing a responsive and intuitive UI for the flashcards
+- Managing state across different components for navigation and tracking
+
+## License
+
+    Copyright [2023] [Abdullah Al Mahmud]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 ## Installation and Setup
 
@@ -93,10 +132,6 @@ The app contains a variety of computer science flashcards covering topics like:
 - Difficulty levels for beginners to advanced learners
 - Ability to add custom flashcards
 - Spaced repetition system to optimize learning
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
